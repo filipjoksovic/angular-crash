@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()" *ngIf="showAddTask">
+    <div class="form-control">
+        <label for="task-name">Task name</label>
+        <input type="text" name = "task_name" [(ngModel)]="task_name" id = "task-name" placeholder = "Task name">
+    </div>
+    <div class="form-control">
+        <label for="task-description">Task description</label>
+        <input type="text" name = "task_description" [(ngModel)]="task_description" id = "task-description" placeholder = "Task description">
+    </div>
+    <div class="form-control">
+        <label for="task-status">Task status</label>
+        <select name="task_status" [(ngModel)]="task_status" id="task-status">
+            <option value = "New">New</option>
+            <option value = "Old">Old</option>
+        </select>
+    </div>
+    <div class = "form-control form-control-check">
+        <label for = "reminder">Set a reminder</label>
+        <input type = "checkbox" name = "reminder" [(ngModel)]="reminder" id = "reminder">
+    </div>
+    <app-button fw = "true" text = "Create task" color = "Aliceblue" fcolor = "black" type = "submit"></app-button>
+</form>
